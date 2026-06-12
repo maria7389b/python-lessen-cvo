@@ -58,3 +58,34 @@ elif wind_kmh > 55 or kraan_hoogte > 40:
     print("⚠️ KRAAN STATUS: Alleen bediening door gecertificeerde masters. Wees uiterst voorzichtig.")
 else:
     print("✅ KRAAN STATUS: Werking binnen de normale veiligheidsmarges.")
+
+# Korting calculator – met klantsegmentatie + input validatie
+
+bedrag = input("Geef het bedrag in €: ")
+
+if bedrag.isdigit():
+    bedrag = float(bedrag)
+else:
+    print("Ongeldige invoer! Waarde = 0")
+    bedrag = 0
+
+klant = input("Klanttype (Standaard/Zilver/Goud): ")
+korting = 0
+
+# basis korting
+if bedrag > 100:
+    korting = 10
+elif bedrag > 50:
+    korting = 5
+
+# klantsegmentatie
+if klant == "Goud":
+    korting += 5
+elif klant == "Zilver":
+    korting += 2
+
+korting_bedrag = bedrag * korting / 100
+eindprijs = bedrag - korting_bedrag
+
+print(f"Korting: €{korting_bedrag:.2f}")
+print(f"Eindprijs: €{eindprijs:.2f}")
