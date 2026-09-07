@@ -1,5 +1,4 @@
 # les01_extra_rapport.py
-
 # Hoeveel servers?
 aantal_servers = int(input("Hoeveel servers wil je controleren? "))
 
