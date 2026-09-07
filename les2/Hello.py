@@ -101,3 +101,5 @@ teBetalen = totaal - korting
 print(f'Totaal voor korting: €{totaal:.2f}')
 print(f'Korting ({kortingPercentage}%): -€{korting:.2f}')
 print(f'Te betalen: €{teBetalen:.2f}')
+
+
