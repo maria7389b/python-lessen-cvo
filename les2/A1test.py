@@ -175,5 +175,13 @@ class ElektrischeWagen(Voertuig):
     def __str__(self):
         return f'{self.merk} {self.model} ({self.bouwjaar}) | {self.km_stand} km | Batterij: {self.laadniveau}%'
 
+def is_geldig_bouwjaar(jaar):
+    if jaar >= 1990 and jaar <= 2026:
+        return True
+    else:
+        return False
+
+print(is_geldig_bouwjaar(2023))
+print(is_geldig_bouwjaar(1980))
 
 
