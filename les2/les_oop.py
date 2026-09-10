@@ -239,3 +239,26 @@ while True:
     else:
         print("Ongeldige keuze.")
 
+
+class Voertuig:
+    def __init__(self, merk, model, bouwjaar):
+        self.merk = merk
+        self.model = model
+        self.bouwjaar = bouwjaar
+        self.km_stand = 0
+
+
+v1 = Voertuig('Volvo', 'FH16', 2023)
+
+print(v1.merk)
+print(v1.km_stand)
+print(v1)
+v1 = Voertuig('Volvo', 'FH16', 2023)
+
+v2 = Voertuig('Mercedes', 'Actros', 2021)
+
+v2.km_stand = 45000
+
+print(v1.km_stand)
+print(v2.km_stand)
+
